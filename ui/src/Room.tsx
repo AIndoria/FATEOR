@@ -216,8 +216,8 @@ export const Room = ({
                 <Paper className={classes.title} elevation={10} {...setHoverState}>
                     <Tooltip title="Copy Link">
                         <Typography
-                            variant="h4"
-                            component="h4"
+                            variant="h5"
+                            component="h5"
                             style={{cursor: 'pointer'}}
                             onClick={copyLink}
                         >
@@ -248,13 +248,13 @@ export const Room = ({
             {controlVisible && (
                 <Paper className={classes.control} elevation={10} {...setHoverState}>
                     {state.hostStream ? (
-                        <Tooltip title="Cancel Presentation" arrow>
+                        <Tooltip title="Stop Sharing" arrow>
                             <IconButton onClick={stopShare} size="large">
                                 <CancelPresentationIcon fontSize="large" />
                             </IconButton>
                         </Tooltip>
                     ) : (
-                        <Tooltip title="Start Presentation" arrow>
+                        <Tooltip title="Start Sharing" arrow>
                             <IconButton onClick={share} size="large">
                                 <PresentToAllIcon fontSize="large" />
                             </IconButton>
@@ -265,7 +265,7 @@ export const Room = ({
                         classes={{tooltip: classes.noMaxWidth}}
                         title={
                             <div>
-                                <Typography variant="h5">Member List</Typography>
+                                <Typography variant="h5">Users</Typography>
                                 {state.users.map((user) => (
                                     <Typography key={user.id}>
                                         {user.name} {flags(user)}

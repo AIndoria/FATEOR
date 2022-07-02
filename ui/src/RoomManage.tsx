@@ -52,18 +52,11 @@ const CreateRoom = ({room, config}: Pick<UseRoom, 'room'> & {config: UIConfig}) 
                 />
                 <Box paddingBottom={0.5}>
                     <Typography>
-                        Nat Traversal via:{' '}
-                        <Link
-                            href="https://screego.net/#/nat-traversal"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            {mode.toUpperCase()}
-                        </Link>
+                        Nat Traversal via:{' '} {mode.toUpperCase()}
                     </Typography>
                 </Box>
                 <Button onClick={submit} fullWidth variant="contained">
-                    Create Room
+                    Start Session
                 </Button>
             </FormControl>
         </div>
@@ -84,10 +77,10 @@ export const RoomManage = ({room, config}: {room: FCreateRoom; config: UseConfig
             spacing={4}
         >
             <Grid item xs={12}>
-                <Typography align="center" gutterBottom>
-                    <img src="./logo.svg" style={{width: 230}} alt="logo" />
-                </Typography>
                 <Paper elevation={3} style={{padding: 20}}>
+                <Typography align="center" gutterBottom>
+                    <img src="./logo.png" style={{width: '100%'}} alt="civitates fateor logo" />
+                </Typography>
                     {loginVisible ? (
                         <LoginForm
                             config={config}
@@ -96,7 +89,7 @@ export const RoomManage = ({room, config}: {room: FCreateRoom; config: UseConfig
                     ) : (
                         <>
                             <Typography style={{display: 'flex', alignItems: 'center'}}>
-                                <span style={{flex: 1}}>Hello {config.user}!</span>{' '}
+                                <span style={{flex: 1}}>Hi {config.user}!</span>{' '}
                                 {config.loggedIn ? (
                                     <Button variant="outlined" size="small" onClick={config.logout}>
                                         Logout
@@ -117,9 +110,9 @@ export const RoomManage = ({room, config}: {room: FCreateRoom; config: UseConfig
                     )}
                 </Paper>
             </Grid>
-            <div style={{position: 'absolute', margin: '0 auto', bottom: 0}}>
-                Screego {config.version} |{' '}
-                <Link href="https://github.com/screego/server/">GitHub</Link>
+            <div className="footer" style={{position: 'absolute', margin: '0 auto', bottom: 0}}>
+                {config.version} //{' '} 
+                <Link href="https://github.com/aindoria/fateor/">INDORIA LABS NORTH AMERICA</Link> {' '} // {' '} CIVITATES RES PUBLICA 
             </div>
         </Grid>
     );

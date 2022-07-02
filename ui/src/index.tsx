@@ -18,7 +18,7 @@ const theme = createTheme(
             MuiSelect: {icon: {position: 'relative'}},
             MuiLink: {
                 root: {
-                    color: '#458588',
+                    color: '#CBD691',
                 },
             },
             MuiIconButton: {
@@ -33,28 +33,28 @@ const theme = createTheme(
             },
             MuiToolbar: {
                 root: {
-                    background: '#a89984',
+                    background: '#9BA777',
                 },
             },
             MuiTooltip: {
                 tooltip: {
-                    fontSize: '1.6em',
+                    fontSize: '1rem',
                 },
             },
         },
         palette: {
             background: {
-                default: '#282828',
-                paper: '#32302f',
+                default: '#181F1C',
+                paper: '#2E4231',
             },
             text: {
                 primary: '#fbf1d4',
             },
             primary: {
-                main: '#a89984',
+                main: '#9BA777',
             },
             secondary: {
-                main: '#f44336',
+                main: '#CA8676',
             },
             mode: 'dark',
         },
